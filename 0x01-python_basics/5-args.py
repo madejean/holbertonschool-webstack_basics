@@ -1,15 +1,19 @@
 #!/usr/bin/python3
 import sys
 
-args = sys.argv[1:]
+def number_agrv():
+    argv = sys.argv[1:]
 
-if len(args) == 0:
-    print("{} argmument.".format(len(args)))
-elif len(args) == 1:
-    print("{} argmument:".format(len(args)))
-    for i in args:
-        print("{}: {}".format(len(args), i))
-else:
-    print("{} argmuments:".format(len(args)))
-    for i in range(len(args)):
-        print("{}: {}".format(i + 1, args[i]))
+    if len(argv) == 0:
+        print("{} argmument.".format(len(argv)))
+    elif len(argv) == 1:
+        print("{} argmument:".format(len(argv)))
+        for i in argv:
+            print("{}: {}".format(len(argv), i))
+    else:
+        print("{} argmuments:".format(len(argv)))
+        for i in range(len(argv)):
+            print("{}: {}".format(i + 1, argv[i]))
+
+if __name__ == "__main__":
+    number_agrv()
