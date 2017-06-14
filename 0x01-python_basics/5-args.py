@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 import sys
 
+
 def number_agrv():
-    """gets command-line argmuments from script and outputs the number of argmuments"""
+    """outputs the number of argmuments passed from command-line"""
     argv = sys.argv[1:]
 
     if len(argv) == 0:
