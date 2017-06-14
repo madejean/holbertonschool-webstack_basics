@@ -2,6 +2,7 @@
 import sys
 
 def number_agrv():
+    """gets command-line argmuments from script and outputs the number of argmuments"""
     argv = sys.argv[1:]
 
     if len(argv) == 0:
