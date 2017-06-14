@@ -7,6 +7,5 @@ def addition():
     b = 2
     print("{} + {} = {}".format(a, b, add(1, 2)))
 
-"""not executing when imported"""
 if __name__ == "__main__":
     addition()
