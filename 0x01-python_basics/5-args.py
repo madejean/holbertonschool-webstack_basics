@@ -3,16 +3,14 @@ import sys
 
 
 def number_argv():
-    """outputs the number of argmuments passed from command-line"""
-    argv = sys.argv[1:]
-    if len(argv) == 0:
-        print("{} argmument.".format(len(argv)))
-    elif len(argv) == 1:
-        print("{} argmument:".format(len(argv)))
-        for i in argv:
-            print("{}: {}".format(len(argv), i))
-    if len(argv) > 1:
-        print("{} argmuments:".format(len(argv)))
+    argv = sys.argv
+    if len(argv) < 2:
+        print("{} argmument.".format(0))
+    elif len(argv) == 2:
+        print("{} argmument:".format(1))
+        print("{}: {}".format(1, argv[1]))
+    else:
+        print("{} argmuments:".format(len(argv) - 1))
         for i in range(len(argv)):
             print("{}: {}".format(i + 1, argv[i]))
 
