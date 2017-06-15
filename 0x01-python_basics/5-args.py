@@ -11,8 +11,8 @@ def number_argv():
         print("{}: {}".format(1, argv[1]))
     else:
         print("{} argmuments:".format(len(argv) - 1))
-        for i in range(len(argv)):
-            print("{}: {}".format(i + 1, argv[i]))
+        for i in range(1, len(argv)):
+            print("{}: {}".format(i, argv[i]))
 
 if __name__ == "__main__":
     number_argv()
