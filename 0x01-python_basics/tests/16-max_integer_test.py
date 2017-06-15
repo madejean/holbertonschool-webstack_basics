@@ -15,6 +15,9 @@ class TestMaxInteger(unittest.TestCase):
         self.assertTrue(max_integer([1, 2, 3, 4]), 4)
         self.assertTrue(max_integer([1, 3, 4, 2]), 4)
 
+    def test_list_None(self):
+        self.assertEqual(max_integer([]), None)
+
     def test_not_None(self):
         self.assertIsNotNone(max_integer([1, 2, 3, 4]))
         self.assertIsNotNone(max_integer([1, 3, 4, 2]))

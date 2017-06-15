@@ -14,23 +14,20 @@ a and b must be integers or floats"""
 2
 >>> add_integer(4, "School")
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "/Users/marine/holbertonschool-webstack_basics/0x01-python_basics/13-add_integer.py", line 6, in add_integer
-    raise TypeError("b must be an integer")
+  ...
+  TypeError("b must be an integer")
 TypeError: b must be an integer
 >>> add_integer("Hello", 1)
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "/Users/marine/holbertonschool-webstack_basics/0x01-python_basics/13-add_integer.py", line 4, in add_integer
-    raise TypeError("a must be an integer")
+  ...
+  TypeError("a must be an integer")
 TypeError: a must be an integer
 >>> add_integer(0, 1.2)
 1
->>> add_integer(44.1, 12)
-56
+>>> add_integer(-44.1, -12)
+-56
 >>> add_integer("PLOP", "PIP")
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "/Users/marine/holbertonschool-webstack_basics/0x01-python_basics/13-add_integer.py", line 4, in add_integer
-    raise TypeError("a must be an integer")
+  ...
+  TypeError("a must be an integer")
 TypeError: a must be an integer
