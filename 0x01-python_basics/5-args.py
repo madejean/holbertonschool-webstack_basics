@@ -2,7 +2,7 @@
 import sys
 
 
-def number_agrv():
+def number_argv():
     """outputs the number of argmuments passed from command-line"""
     argv = sys.argv[1:]
     if len(argv) == 0:
@@ -11,10 +11,10 @@ def number_agrv():
         print("{} argmument:".format(len(argv)))
         for i in argv:
             print("{}: {}".format(len(argv), i))
-    else:
+    if len(argv) > 1:
         print("{} argmuments:".format(len(argv)))
         for i in range(len(argv)):
             print("{}: {}".format(i + 1, argv[i]))
 
 if __name__ == "__main__":
-    number_agrv()
+    number_argv()
