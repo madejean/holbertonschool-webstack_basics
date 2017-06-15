@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-for i in range(0, 99):
-    if i < 9:
-        print("{}".format(0), end="")
-    print("{}".format(i), "", sep=", ", end=""
-          if i < 98 else "{}\n".format(99))
+for i in range(00, 100):
+    if i != 99:
+        print("{}".format("%02d" % i), end=", ")
+    else:
+        print("{}".format(i), end="\n")
