@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 class Node:
 
     def __init__(self, data, next_node=None):
@@ -22,10 +21,10 @@ class Node:
 
     @next_node.setter
     def next_node(self, value):
-        if value is None or isinstance(value, Node):
-            self.__next_node = value
-        else:
+        if value is not None and not isinstance(value, Node):
             raise TypeError("next_node must be a Node object")
+        else:
+            self.__next_node = value
 
 
 class SinglyLinkedList:
@@ -38,27 +37,29 @@ class SinglyLinkedList:
 
     def sorted_insert(self, value):
         new_node = Node(value)
-        node = self.head
+        curr = self.head
 
-        if node is None:
+        if curr is None:
             self.head = new_node
 
-        elif value < node.data:
-            new_node.next_node = node
+        elif curr.data > value:
+            new_node.next_node = curr
             self.head = new_node
 
         else:
-            while node.next_node is not None:
-                if value > node.next_node.data:
+            while curr.next_node is not None:
+                if curr.next_node.data > value:
                     break
-                node = node.next_node
-            new_node.next_node = node.next_node
-            node.next_node = new_node
+                curr = curr.next_node
+            new_node.next_node = curr.next_node
+            curr.next_node = new_node
 
     def __str__(self):
         s = ""
-        node = self.head
-        while node:
-            s += str(node.data) + "\n"
-            node = node.next_node
-        return s[:-1]
+        curr = self.head
+        while curr:
+            s += str(curr.data)
+            if curr.next_node is not None:
+                s += '\n'
+            curr = curr.next_node
+        return s
