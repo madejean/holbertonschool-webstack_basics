@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+import doctest
+
 """
 add_integer(a, b) only accepts a and b as integers or floats
 a TypeError message will appear if a and b not int or flot
@@ -17,3 +19,7 @@ def add_integer(a, b):
         raise TypeError("b must be an integer")
     else:
         return (int(a) + int(b))
+
+
+if __name__ == '__main__':
+    doctest.testfile('./tests/13-add_integer.txt')
