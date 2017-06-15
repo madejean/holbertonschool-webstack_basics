@@ -43,7 +43,6 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([-1, -3, -4, -2]), -1)
 
     def test_mixed_list(self):
-        self.assertEqual(max_integer(["1", "12", "c", "d"]), "d")
         self.assertEqual(max_integer(["-1", "1", "c", "m"]), "m")
 
 
