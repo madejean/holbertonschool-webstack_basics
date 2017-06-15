@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 class Node:
 
     def __init__(self, data, next_node=None):
@@ -60,6 +61,6 @@ class SinglyLinkedList:
         while curr:
             s += str(curr.data)
             if curr.next_node is not None:
-                s += '\n'
+                s += "\n"
             curr = curr.next_node
         return s
