@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 import sys
 
-def number_agrv():
-    """gets command-line argmuments from script and outputs the number of argmuments"""
+
+def number_argv():
+    """outputs the number of arguments from command-line"""
     argv = sys.argv[1:]
 
     if len(argv) == 0:
@@ -17,4 +18,4 @@ def number_agrv():
             print("{}: {}".format(i + 1, argv[i]))
 
 if __name__ == "__main__":
-    number_agrv()
+    number_argv()
