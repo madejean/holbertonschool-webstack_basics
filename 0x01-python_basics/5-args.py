@@ -1,18 +1,21 @@
 #!/usr/bin/python3
 import sys
 
+def number_agrv():
+    """gets command-line argmuments from script and outputs the number of argmuments"""
+    argv = sys.argv[1:]
 
-def number_argv():
-    argv = sys.argv
-    if len(argv) < 2:
-        print("{} argmument.".format(0))
-    elif len(argv) == 2:
-        print("{} argmument:".format(1))
-        print("{}: {}".format(1, argv[1]))
+    if len(argv) == 0:
+        print("{} argmument.".format(len(argv)))
+    elif len(argv) == 1:
+        print("{} argmument:".format(len(argv)))
+        for i in argv:
+            print("{}: {}".format(len(argv), i))
     else:
-        print("{} argmuments:".format(len(argv) - 1))
-        for i in range(1, len(argv)):
-            print("{}: {}".format(i, argv[i]))
+        print("{} argmuments:".format(len(argv)))
+        for i in range(len(argv)):
+            print("{}: {}".format(i + 1, argv[i]))
 
+"""outputs the number of argmuments passed from command-line"""
 if __name__ == "__main__":
-    number_argv()
+    number_agrv()
