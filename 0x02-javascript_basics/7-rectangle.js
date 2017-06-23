@@ -1,5 +1,5 @@
 #!/usr/bin/node
-function Rectangle(w, h) {
+function Rectangle (w, h) {
   this.width = w;
   this.height = h;
 }
