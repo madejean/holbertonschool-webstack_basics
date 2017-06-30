@@ -14,8 +14,8 @@ def get_people():
 
     if j['next'] is not None:
         n = requests.get(j['next']).json()
-        results = n['results']
-        for i in results:
+        next_results = n['results']
+        for i in next_results:
             print(i['name'])
 
 if __name__ == "__main__":
