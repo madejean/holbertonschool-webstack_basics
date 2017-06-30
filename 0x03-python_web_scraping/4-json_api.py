@@ -13,13 +13,13 @@ def search_user():
 
     try:
         result = r.json()
+        if result == {}:
+            print("No result")
+        else:
+            print([result["id"]], result["name"])
+
     except:
         print("Not a valid JSON")
-
-    if result == {}:
-        print("No result")
-    else:
-        print([result["id"]], result["name"])
 
 if __name__ == "__main__":
     search_user()
