@@ -3,11 +3,11 @@ import requests
 import sys
 
 
-def get_xRequestId():
+def get_requestId():
     url = sys.argv[1]
     r = requests.get(url)
-    requestId = r.headers['X-Request-Id']
+    requestId = r.headers.get('X-Request-Id')
     print(requestId)
 
 if __name__ == "__main__":
-    get_xRequestId()
+    get_requestId()
