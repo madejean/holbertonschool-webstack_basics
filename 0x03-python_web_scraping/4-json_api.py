@@ -13,10 +13,10 @@ def search_user():
 
     try:
         result = r.json()
-        if len(result) == 0:
+        if result == {}:
             print("No result")
         else:
-            print([result["id"]], result["name"])
+            print("[{}] {}".format(result["id"], result["name"]))
 
 
     except:
