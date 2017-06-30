@@ -4,7 +4,8 @@ import requests
 
 
 def search_user():
-    q=''
+    q = ''
+
     if len(sys.argv) > 1:
         q = sys.argv[1]
 
