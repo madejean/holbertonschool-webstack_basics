@@ -4,7 +4,8 @@ import requests
 
 
 def get_people():
-    r = requests.get('http://swapi.co/api/people/?search=' + sys.argv[1])
+    params = sys.argv[1]
+    r = requests.get('http://swapi.co/api/people/', params={'search': params})
     j = r.json()
     results = j['results']
 
