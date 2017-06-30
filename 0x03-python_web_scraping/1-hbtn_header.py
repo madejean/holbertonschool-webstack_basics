@@ -2,7 +2,12 @@
 import requests
 import sys
 
-url = sys.argv[1]
-r = requests.get(url)
-requestId = r.headers['X-Request-Id']
-print(requestId)
+
+def get_xRequestId():
+    url = sys.argv[1]
+    r = requests.get(url)
+    requestId = r.headers['X-Request-Id']
+    print(requestId)
+
+if __name__ == "__main__":
+    get_xRequestId()
