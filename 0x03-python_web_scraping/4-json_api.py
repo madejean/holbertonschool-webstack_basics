@@ -9,18 +9,17 @@ def search_user():
     else:
         q = ''
 
-    r = requests.post('http://54.145.119.185:33424/search_user', data={'q': q})
+    r = requests.post('http://0.0.0.0:5000/search_user', data={'q': q})
 
     try:
         result = r.json()
-        if result == {}:
-            print("No result")
-        else:
-            print("[{}] {}".format(result["id"], result["name"]))
-
-
     except:
         print("Not a valid JSON")
+
+    if result == {}:
+        print("No result")
+    else:
+        print([result["id"]], result["name"])
 
 if __name__ == "__main__":
     search_user()
